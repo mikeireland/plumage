@@ -17,7 +17,7 @@ class ParameterOutOfBoundsException(Exception):
 #------------------------------------------------------------------------------
 # Properties
 #------------------------------------------------------------------------------
-using_echelle = True
+using_echelle = False
 norm = 1
 
 # Echelle dispersers:
@@ -33,15 +33,15 @@ if using_echelle:
     
 # Using WiFeS
 else:
-    # Red
-    resolution = 24000
-    wl_min = 5000
-    wl_max = 10000
+    # 3000 series gratings
+    resolution = 3000
+    wl_min = 3600
+    wl_max = 9000
     
-    # Blue
-    resolution = 24000
-    wl_min = 5000
-    wl_max = 10000
+    # 7000 series gratings
+    resolution = 7000
+    wl_min = 3600
+    wl_max = 9000
 #------------------------------------------------------------------------------    
 # Setup IDL
 def idl_init():
